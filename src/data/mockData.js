@@ -375,7 +375,7 @@ export const pricingPlans = [
     price: 150,
     period: "month",
     description: "Restaurant-focused social media, flyers, reels, and community promotion with daily posting.",
-    paymentButtonId: "pl_ReMKG2ApAOOfaQ",
+    paymentButtonId: "pl_SSJuB5buM1qZ2T",
     features: [
       "Social Media Marketing & Management (Facebook & Instagram)",
       "Daily posting of food offers, combos, discounts, and updates",
