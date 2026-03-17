@@ -144,7 +144,7 @@ const Footer = () => {
           className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © {currentYear} {companyInfo.name}. All rights reserve
+            © {currentYear} {companyInfo.name}. All rights reserved.
           </p>
           {/* <div className="flex space-x-6 text-sm">
             <Link to="/" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">

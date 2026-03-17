@@ -1,7 +1,7 @@
 // src/components/Pricing.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Check, Star, ArrowRight } from 'lucide-react';
+import { Check, Star, ArrowRight, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { pricingPlans, companyInfo } from '../data/mockData';
 import { USD_TO_INR_RATE, USD_TO_INR_LAST_UPDATED } from '../config/currency';
@@ -243,11 +243,11 @@ const Pricing = () => {
           >
             <p className="text-sm font-semibold uppercase tracking-wide text-blue-600">packages</p>
             <h2 className="mt-2 text-3xl lg:text-4xl font-bold text-gray-900">
-              One price, all the support you need
+              Two plans, all the support you need
             </h2>
             <p className="mt-3 text-base text-gray-600">
-              Transparent plans that bundle design, marketing, and reputation management so you get an organised
-              presence without juggling tools.
+              Pick Standard for everyday coverage or Premium for studio-grade content and amplified promotion--both bundle
+              design, marketing, and reputation management so you get an organised presence without juggling tools.
             </p>
           </motion.div>
 
@@ -266,12 +266,6 @@ const Pricing = () => {
                     plan.popular ? 'border-blue-500' : 'border-gray-200'
                   }`}
                 >
-                  {plan.popular && (
-                    <div className="absolute -top-3 right-6 inline-flex items-center gap-2 rounded-full bg-blue-600 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-lg">
-                      <Star size={14} className="fill-current" />
-                      Most Popular
-                    </div>
-                  )}
 
                   <div className="flex flex-col gap-6 p-8">
                     <div className="flex flex-col gap-2">
@@ -305,21 +299,20 @@ const Pricing = () => {
                     </div>
 
                     <div className="space-y-3">
-                      <button
-                        className={`w-full rounded-2xl px-6 py-3 text-lg font-semibold transition-all duration-300 ${
-                          plan.popular
-                            ? 'bg-blue-600 text-white hover:bg-blue-700'
-                            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                        }`}
-                      >
-                        {plan.buttonText}
-                      </button>
-
-                      <div className="space-y-2 text-center text-xs text-gray-500">
-                        <div className="min-h-[60px] flex items-center justify-center">
-                          <RazorpayButton paymentButtonId={paymentButtonId} className="w-full" />
+                      <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-md shadow-slate-200/60 flex flex-col items-center gap-4">
+                        <div className="flex flex-col items-center gap-1 text-center text-sm font-semibold text-slate-600">
+                          <span className="inline-flex items-center gap-2">
+                            <ShieldCheck size={14} className="text-green-500" />
+                            Pay securely with Razorpay
+                          </span>
+                          <span className="text-[11px] text-slate-400">Instant confirmation</span>
                         </div>
-                        <p>Secure payment powered by Razorpay. (Button ID: {paymentButtonId})</p>
+                        <div className="flex w-full justify-center">
+                          <RazorpayButton paymentButtonId={paymentButtonId} className="w-full max-w-xs text-center" />
+                        </div>
+                      </div>
+                      <div className="text-center text-[11px] text-gray-500">
+                        Secure payment powered by Razorpay.
                       </div>
                     </div>
                   </div>

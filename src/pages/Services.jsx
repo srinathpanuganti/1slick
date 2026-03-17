@@ -1,16 +1,7 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
-  ArrowRight,
-  CheckCircle,
-  Lightbulb,
-  LayoutDashboard,
-  Rocket,
-  Users,
-  Layers,
-  Sparkles
-} from 'lucide-react';
+import { ArrowRight, CheckCircle, ShieldCheck, Rocket, Users, Sparkles, Layers } from 'lucide-react';
 import { services, companyInfo } from '../data/mockData';
 
 const Services = () => {
@@ -20,48 +11,39 @@ const Services = () => {
 
   const serviceHighlights = [
     {
-      title: 'Strategy First',
-      description: 'We align every engagement with measurable business goals before we touch the tech stack.',
-      icon: Lightbulb
+      title: 'Restaurant-first strategy',
+      description: 'Content, promos, and support tuned for local reach, footfall, and orders.',
+      icon: ShieldCheck
     },
     {
-      title: 'Design Meets Engineering',
-      description: 'Product strategists, designers, and engineers work as one squad so decisions stay cohesive.',
-      icon: LayoutDashboard
+      title: 'Studio-quality content',
+      description: 'Reels, flyers, and menu creatives optimised for engagement and conversions.',
+      icon: Sparkles
     },
     {
-      title: 'Growth Partnership',
-      description: 'Launch is day one; we continue to iterate, experiment, and scale alongside your team.',
+      title: 'Always-on growth',
+      description: 'Daily posting, rapid responses, and community promotion to keep you visible.',
       icon: Rocket
     }
   ];
 
   const processSteps = [
     {
-      title: 'Discovery & Alignment',
-      description: 'Immersive workshops uncover customer journeys, stakeholder needs, and the success metrics that matter.'
+      title: 'Plan',
+      description: 'We define offers, events, and brand positioning for the month.'
     },
     {
-      title: 'Experience Design',
-      description: 'Rapid prototyping and collaborative feedback loops shape intuitive, accessible experiences.'
+      title: 'Produce',
+      description: 'Shoot reels, design flyers/menus, and prep daily social content.'
     },
     {
-      title: 'Build & Integrate',
-      description: 'Reliable engineering practices deliver secure, performant products ready for real-world demands.'
+      title: 'Promote',
+      description: 'Publish daily, boost in local groups, and engage DMs/comments.'
     },
     {
-      title: 'Launch & Optimize',
-      description: 'We activate go-to-market support, knowledge transfer, and data-led iteration for sustained growth.'
+      title: 'Protect & Improve',
+      description: 'Manage reviews, track performance, and iterate each week.'
     }
-  ];
-
-  const industries = [
-    'SaaS & Platforms',
-    'E-commerce & Retail',
-    'Fintech & Insurtech',
-    'Healthcare & Wellness',
-    'Education & Learning',
-    'Professional Services'
   ];
 
   return (
@@ -75,11 +57,11 @@ const Services = () => {
               transition={{ duration: 0.7 }}
             >
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                Services designed to accelerate your next <span className="text-gradient">digital product</span>
+                Restaurant marketing services that keep you fully booked
               </h1>
               <p className="text-lg lg:text-xl text-gray-600 leading-relaxed mb-8">
-                From discovery to launch and beyond, {companyInfo.name} combines strategy, design, and engineering to
-                ship solutions that move the needle for your customers and your business.
+                Daily social, reels, flyers, menus, reviews, and community promotionâ€”everything in our pricing plans now
+                delivered as a services stack for your restaurant.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -106,15 +88,15 @@ const Services = () => {
             >
               <div className="inline-flex items-center gap-3 bg-blue-50 text-blue-600 px-4 py-2 rounded-full font-medium">
                 <Sparkles size={18} />
-                Product leadership on demand
+                Restaurant growth on demand
               </div>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <Layers className="text-blue-600 mt-1" size={20} />
                   <div>
-                    <p className="font-semibold text-gray-900">Full lifecycle delivery</p>
+                    <p className="font-semibold text-gray-900">Restaurant-first execution</p>
                     <p className="text-gray-600">
-                      Strategy, design, engineering, QA, and growth support in one integrated engagement.
+                      Content, community promotion, and reputation protection aligned to your offers and seasons.
                     </p>
                   </div>
                 </div>
@@ -123,7 +105,7 @@ const Services = () => {
                   <div>
                     <p className="font-semibold text-gray-900">Embedded partnership</p>
                     <p className="text-gray-600">
-                      We operate as an extension of your team, adapting to your tools, rituals, and cadence.
+                      We operate as your marketing teamâ€”fast responses, daily posts, and a dedicated point of contact.
                     </p>
                   </div>
                 </div>
@@ -143,11 +125,11 @@ const Services = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              What we build <span className="text-blue-600">with you</span>
+              Services tuned for restaurant growth
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Tailored product teams tackle the exact stage you are in, whether you are launching something new,
-              modernising legacy systems, or scaling a proven product.
+              Social, reels, flyers, menus, community promotion, reviews, and a dedicated team—offered as focused
+              services aligned to our latest pricing packages.
             </p>
           </motion.div>
 
@@ -164,16 +146,14 @@ const Services = () => {
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-                {service.features?.length ? (
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={`${service.title}-feature-${idx}`} className="flex items-center text-sm text-gray-500">
-                        <CheckCircle size={16} className="text-blue-500 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
+                <ul className="space-y-2">
+                  {service.features.slice(0, 6).map((feature, idx) => (
+                    <li key={`${service.title}-feature-${idx}`} className="flex items-center text-sm text-gray-500">
+                      <CheckCircle size={16} className="text-blue-500 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
@@ -190,11 +170,11 @@ const Services = () => {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Why teams choose <span className="text-blue-600">{companyInfo.name}</span>
+                Why restaurants choose <span className="text-blue-600">{companyInfo.name}</span>
               </h2>
               <p className="text-gray-600 mb-6">
-                We meet you where you are, whether that is validating product-market fit, modernising existing stacks,
-                or building the next flagship platform. Expect velocity without sacrificing quality.
+                One team to plan, produce, promote, and protect your brandâ€”no contracts, quick setup, and daily execution
+                to keep tables filled.
               </p>
             </motion.div>
 
@@ -324,3 +304,4 @@ const Services = () => {
 };
 
 export default Services;
+

@@ -17,33 +17,71 @@ export const companyInfo = {
 
 export const services = [
   {
-    id: 1,
-    title: "Web Development",
-    description: "Modern, responsive websites built with cutting-edge technologies to deliver exceptional user experiences.",
-    icon: "🌐",
-    features: ["Responsive Design", "SEO Optimization", "Performance Tuning", "Cross-browser Compatibility"]
+    "id": 1,
+    "title": "Social Media Marketing and Management",
+    "description": "Daily posting of food offers, events, combos, and updates across Facebook and Instagram to keep your restaurant visible.",
+    "icon": "📣",
+    "features": [
+      "Daily posts to maintain reach and visibility",
+      "Comment and DM engagement to convert inquiries",
+      "Multi-platform scheduling and consistency"
+    ]
   },
   {
-    id: 1,
-    title: "Understanding Your Business Goals",
-    description: "Deep dive into your business model, target audience, competition, and growth challenges.",
-    icon: "🌐",
-    features: ["Target Audience", "Performance Tuning", "Growth Challenges"]
+    "id": 2,
+    "title": "In-Studio Food Content Creation",
+    "description": "High-quality food reels, shorts, and flyers crafted for reach, engagement, and conversions.",
+    "icon": "🎥",
+    "features": [
+      "5 custom food flyers and 2 reels per week",
+      "Content optimised for engagement and conversions",
+      "Video recording available at our office studio"
+    ]
   },
   {
-    id: 2,
-    title: "Branding & Digital Presence Setup",
-    description: "Establish a strong online identity to reflect professionalism and trust.",
-    icon: "📱",
-    features: []
+    "id": 3,
+    "title": "Menu and Display Design",
+    "description": "On-brand menus, digital boards, and in-store TV creatives that showcase your best sellers.",
+    "icon": "🍽",
+    "features": [
+      "Menu design and updates",
+      "Digital boards and in-store TV screen content",
+      "Visual consistency across touchpoints"
+    ]
   },
   {
-    id: 3,
-    title: "Digital Marketing",
-    description: "Data-driven marketing strategies to boost your online presence and reach your target audience.",
-    icon: "📊",
-    features: ["SEO & SEM", "Social Media", "Content Marketing", "Analytics & Reporting"]
+    "id": 4,
+    "title": "Community Promotions",
+    "description": "Local buzz through targeted Facebook group posts and WhatsApp/community sharing.",
+    "icon": "📢",
+    "features": [
+      "Promotion in 10-20 local food and community groups (Standard)",
+      "Promotion in 20-40 groups plus local promos (Premium)",
+      "WhatsApp group and local community posting when applicable"
+    ]
   },
+  {
+    "id": 5,
+    "title": "Review and Reputation Management",
+    "description": "Proactive monitoring and responses across Google and social to protect and grow your reputation.",
+    "icon": "⭐",
+    "features": [
+      "Google and social review management",
+      "Fast responses during business hours",
+      "Reputation insights and improvements"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Dedicated Restaurant Marketing Team",
+    "description": "A focused team driving your restaurant growth with strategy, content, and support.",
+    "icon": "👥",
+    "features": [
+      "Video Editor, Client POC, Social Media Administrator, Graphic Designer (Premium)",
+      "Restaurant-focused content strategy and brand positioning",
+      "Priority support during business hours"
+    ]
+  }
 ];
 
 export const blogPosts = [
@@ -333,46 +371,56 @@ export const blogPosts = [
 export const pricingPlans = [
   {
     id: 1,
-    name: "Basic",
-    price: 149,
+    name: "Standard",
+    price: 150,
     period: "month",
-    description: "Social media profile optimization and management to keep your presence active.",
-    paymentButtonId: "pl_Rf94FFkxpCCzXZ",
+    description: "Restaurant-focused social media, flyers, reels, and community promotion with daily posting.",
+    paymentButtonId: "pl_ReMKG2ApAOOfaQ",
     features: [
-      "Social Media Profile Optimisation",
-      "Social Media Management",
-      "Social media Marketing (3 Flyers and 1 reel)",
-      "Review Management",
-      "Multi Platforms Posting",
-      "Customized Menu Designs & TV Screens"
+      "Social Media Marketing & Management (Facebook & Instagram)",
+      "Daily posting of food offers, combos, discounts, and updates",
+      "5 custom food flyers & 2 high-engagement reels per week",
+      "Google & social media review and reputation management",
+      "Menu design, food posters & digital TV screen content",
+      "Promotion in 10-20 local food & community Facebook groups",
+      "WhatsApp group & local community posting (if applicable)",
+      "Customer DM messages & comment engagement",
+      "Everyday posting to keep your restaurant visible",
+      "Fast response support during business hours",
+      "No contracts",
+      "Consistent customer reach",
+      "Local visibility & foot traffic"
     ],
     popular: false,
     buttonText: "Get Started"
   },
   {
     id: 2,
-    name: "Standard",
-    price: 199,
+    name: "Premium",
+    price: 300,
     period: "month",
-    description: "Integrated marketing, reputational support, and design services with dedicated guidance.",
-    paymentButtonId: "pl_Rf95nFvL4EwdGQ",
+    description: "In-studio content creation, amplified promotion, and a dedicated 4-person marketing team.",
+    paymentButtonId: "pl_SSJrb2ueYI9fQh",
     features: [
-      "Website Design & Development",
-      "Google My Business Profile",
-      "Yelp Profile Optimisation",
-      "Social Media Management",
-      "Social Media Profile Optimisation",
-      "Social media Marketing (5flyers and 2 reels)",
-      "Review Management",
-      "Customized Menu Designs & TV Screens",
-      "Content Creation",
-      "Multi Platforms Posting (20+ Fb groups posting)",
-      "Responses to Comments & Direct Messages",
-      "24/7 Premium Support",
-      "Dedicated Account Manager",
-      "Monthly Strategy Calls",
-      "Analytics & Reporting",
-      "Dynamic Website Designing and Hosting - Additional Charges applicable"
+      "Social Media Marketing & Management (Facebook & Instagram)",
+      "Daily posting of food offers, events, and promotions",
+      "Professional in-studio food content creation (reels & short-form videos)",
+      "Content optimised for reach, engagement, and conversions",
+      "Increased frequency of custom food flyers & viral reels",
+      "Google & social media review and reputation management",
+      "Menu design, digital boards & in-store TV content",
+      "Promotion in 20-40 local food & community Facebook groups",
+      "WhatsApp group & local promotions (if applicable)",
+      "DM & comment engagement to convert inquiries into orders",
+      "Consistent everyday posting",
+      "Restaurant-focused content strategy & brand positioning",
+      "Priority support during business hours",
+      "Website handling, menu updates & content management",
+      "Dedicated professional marketing team (Video Editor, Client POC, Social Media Administrator, Graphic Designer)",
+      "No contracts",
+      "Studio-quality food content",
+      "Higher reach, more orders & reservations",
+      "Faster restaurant brand growth"
     ],
     popular: true,
     buttonText: "Most Popular"

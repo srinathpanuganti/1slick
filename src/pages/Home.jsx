@@ -93,7 +93,8 @@ const Home = () => {
               Our <span className="text-blue-600">Services</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We offer comprehensive digital solutions to help your business thrive in the modern world
+              Restaurant marketing packages lifted from our Pricing page—daily social, reels, flyers, reviews, and
+              community promotion.
             </p>
           </motion.div>
 
@@ -108,10 +109,10 @@ const Home = () => {
                 className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group card-hover"
               >
                 <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
+                <p className="text-gray-600 mb-3">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.slice(0, 3).map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-500">

@@ -83,3 +83,29 @@ code {
     /* @apply bg-background text-foreground; */
     }
 }
+
+/* Razorpay hosted button overrides */
+.razorpay-payment-button {
+  width: 100% !important;
+  max-width: 240px !important;
+  border: none !important;
+  border-radius: 12px !important;
+  background: linear-gradient(120deg, #4f46e5 0%, #2563eb 100%) !important;
+  color: #fff !important;
+  padding: 12px 18px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.18) !important;
+  transition: transform 150ms ease, box-shadow 150ms ease, filter 150ms ease !important;
+}
+
+.razorpay-payment-button:hover {
+  transform: translateY(-1px) scale(1.01);
+  filter: brightness(1.03);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.22) !important;
+}
+
+.razorpay-payment-button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.2) !important;
+}
