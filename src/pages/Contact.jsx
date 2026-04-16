@@ -105,7 +105,6 @@ const Contact = () => {
       title: "Call Us",
       details: companyInfo.phone,
       description: "Mon-Fri from 8am to 5pm",
-      action: `tel:${companyInfo.phone}`
     },
     {
       icon: MapPin,
@@ -167,6 +166,19 @@ const Contact = () => {
                     >
                       Contact Now
                     </a>
+                  )}
+                  {info.actions && (
+                    <div className="mt-3 flex flex-col items-center gap-1">
+                      {info.actions.map((phone) => (
+                        <a
+                          key={phone.href}
+                          href={`tel:${phone.href}`}
+                          className="text-blue-600 hover:text-blue-800 transition-colors duration-300"
+                        >
+                          {phone.label}
+                        </a>
+                      ))}
+                    </div>
                   )}
                 </div>
               );
@@ -267,7 +279,7 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
-                        placeholder="+91 XXXXXXXX"
+                        placeholder="+1 (310) 220-0778 / +91 8309115106"
                       />
                     </div>
                     

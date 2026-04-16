@@ -174,7 +174,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={member.id}
@@ -187,7 +187,7 @@ const About = () => {
                 <img
                   src={member.avatar}
                   alt={member.name}
-                  className="w-24 h-24 rounded-full object-cover mx-auto mb-4"
+                  className="w-24 h-24 rounded-full object-cover mx-auto mb-4 shadow-md"
                 />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
                 <p className="text-blue-600 font-medium mb-3">{member.position}</p>

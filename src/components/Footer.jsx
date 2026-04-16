@@ -120,12 +120,17 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="text-blue-400" />
-                <a
-                  href={`tel:${companyInfo.phone}`}
-                  className="text-gray-300 hover:text-blue-400 transition-colors duration-300"
-                >
-                  {companyInfo.phone}
-                </a>
+                <div className="flex flex-col">
+                  {companyInfo.phoneNumbers.map((phone) => (
+                    <a
+                      key={phone.href}
+                      href={`tel:${phone.href}`}
+                      className="text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                    >
+                      {phone.label}
+                    </a>
+                  ))}
+                </div>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin size={18} className="text-blue-400 mt-1" />

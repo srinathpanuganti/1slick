@@ -1,3 +1,5 @@
+import teamAvatarPlaceholder from '../assets/team-avatar-placeholder.svg';
+
 // Mock data for the 1Slick Technologies website
 
 export const companyInfo = {
@@ -5,8 +7,12 @@ export const companyInfo = {
   tagline: "Transforming Ideas Into Digital Solutions",
   description: "We are a leading technology company specializing in innovative digital solutions that help businesses grow and succeed in the modern digital landscape.",
   email: "1Slicktechnologies@gmail.com",
-  phone: "+91 7416040436",
-  address: "Nagole, Hyderabad",
+  phone: "+1 (310) 220-0778 / +91 8309115106",
+  phoneNumbers: [
+    { label: "+1 (310) 220-0778", href: "+13102200778" },
+    { label: "+91 8309115106", href: "+918309115106" }
+  ],
+  address: "Hyderabad, Telangana",
   social: {
     facebook: "https://facebook.com/1slicktech",
     twitter: "https://twitter.com/1slicktech",
@@ -553,31 +559,38 @@ export const termsOfService = {
 export const teamMembers = [
   {
     id: 1,
-    name: "Alex Thompson",
-    position: "CEO & Founder",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
-    bio: "Visionary leader with 15+ years of experience in technology and digital innovation."
+    name: "Simon",
+    position: "Web Analyst / Marketing Data Analyst",
+    avatar: teamAvatarPlaceholder,
+    bio: "Tracks web performance and marketing data to turn campaign activity into measurable business insight."
   },
   {
     id: 2,
-    name: "Sarah Chen",
-    position: "Chief Technology Officer",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face",
-    bio: "Expert in software architecture and emerging technologies, leading our technical vision."
+    name: "Antony",
+    position: "Marketing Director",
+    avatar: teamAvatarPlaceholder,
+    bio: "Leads campaign strategy, positioning, and execution across channels to keep growth focused and consistent."
   },
   {
     id: 3,
-    name: "Marcus Johnson",
+    name: "Nagarjuna",
     position: "Head of Design",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
-    bio: "Creative director passionate about user experience and innovative digital design."
+    avatar: teamAvatarPlaceholder,
+    bio: "Shapes the visual system, brand presentation, and user-facing design details across every deliverable."
   },
   {
     id: 4,
-    name: "Lisa Rodriguez",
-    position: "Marketing Director",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
-    bio: "Strategic marketing expert driving growth through data-driven digital campaigns."
+    name: "Razzak",
+    position: "Videographer / Creative Content Producer",
+    avatar: teamAvatarPlaceholder,
+    bio: "Produces video-led creative content built for reels, promotions, and high-engagement brand storytelling."
+  },
+  {
+    id: 5,
+    name: "Sam",
+    position: "Content Marketing Manager",
+    avatar: teamAvatarPlaceholder,
+    bio: "Owns content planning and messaging so campaigns stay aligned, timely, and relevant to the audience."
   }
 ];
 
